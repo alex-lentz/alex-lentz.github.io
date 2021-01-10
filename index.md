@@ -60,7 +60,7 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1>Alex Lentzy</h1>
+              <h1>Alex Lentz</h1>
               <span class="subheading">Data Science and Other Stuff</span>
             </div>
           </div>
