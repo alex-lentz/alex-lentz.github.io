@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/png" href="img/a_logo.png"/>
+    <title>Alex Lentz | Hamilton or Alex?</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <!-- <a class="navbar-brand" href="index.html">Start Bootstrap</a> -->
+        <a href="index.html"><img src="img/white.png" width="130" height="80"></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+<!--             <li class="nav-item">
+              <a class="nav-link" href="post.html">Sample Post</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/cat.png')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>Hamilton or Alex?</h1>
+              <h2 class="subheading">Comparing a CNN in TensorFlow with Other ML Models</h2>
+              <span class="meta">Posted by
+                <a href="#">Alex</a>
+                on January 28, 2018</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 col-md-10 mx-auto">
+            <html>
+            <head>
+            <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+            <!-- <title>Hamilton or Alex?.md</title></head>
+            <body><h2><strong>Hamilton or Alex?</strong></h2> -->
+            <p><img src='img/IMG_5945.png' alt='IMG_5945' width="50%" height="30%"/><img src='img/IMG_0403.png' alt='IMG_0403' width="50%" height="30%" /></p>
+            <p>&nbsp;</p>
+            <!-- <h4>Comparing a CNN in TensorFlow with Other ML Models</h4> -->
+            <p>A lot has been written and shared over the past 5 years about photo recognition. Specifically, using Convolutional Neural Networks to classify images, recognize faces, and yes - determine if a photo is of a <a href='https://medium.com/timanglade/how-hbos-silicon-valley-built-not-hotdog-with-mobile-tensorflow-keras-react-native-ef03260747f3' target='_blank' >hot  dog or not</a>. Opinions of neural networks and deep neural networks range from <em>IT IS GROUNDBEAKING AND WORLD CHANGING</em> to <a href='https://www.forbes.com/sites/gilpress/2017/09/27/the-ultimate-entrepreneur-jim-goodnight-sas/#5a1ea52f662a' target='_blank' >&quot;That’s exactly what we have been doing in statistics for years and years&quot;</a></p>
+            <p>Last year, I completed a Udacity NanoDegree in Deep Learning to expand my skillset and get a better understanding of what is possible and what isn&#39;t in this space. It is hard to practically apply things like photo recognition for most clients, so in an attempt to apply some of my newfound knowledge to real-life data, I embarked on a little project to answer a couple of questions: </p>
+            <ol>
+            <li>Using a small set of personal pictures, can I create an accurate classifier with a Convolutional Neural Network (CNN)? </li>
+            <li>Assuming I can achieve #1, can I apply other popular ML algorithms to the data and get comparable results? </li>
+            <li>Are there any techniques I can apply to make the CNN more interpretable - or at least understandable to non-Data Scientist? </li>
+
+            </ol>
+            <p>With these goals in mind, I give you <strong>Hamilton or Alex?!</strong></p>
+            <h4>Who is Hamilton?</h4>
+            <p><center><img src='img/alex_cat.png' alt='alex_cat' width="50%" height="30%"/></center></p>
+            <p>Hamilton - specifically A. Hamilton Lentz - is our cat who was rescued from the wilderness of Florida. Being a tux and a miscreant, he appears in many of our photos and thus provided a very easy source of personal photos for this exercise. It is very important to note that Hamilton <em>was</em> named for Alexander Hamilton, and was also named <em>before any of this Alexander Hamilton stuff became popular</em>. I&#39;m an avid history buff, a fan of the writings of Publius, and an staunch Federalist. Ok that&#39;s enough about the cat and why I named him.<br/></p>
+            <p>The rest of the photos in my data set will be of myself. </p>
+            <h4>What is a CNN? </h4>
+            <p>CNN - Convolutional Neural Network, not CNN cable news - is a specific type of neural network architecture that changes the way networks feed in data. It is extremely helpful for photos, and I hope you&#39;ll see why with a little explanation. </p>
+            <p>A normal neural network would take every data point for an observation as an input into the network. In our case, since we&#39;re working with photos - that would be every pixel. Since we are also working with color photos saved in .png files, we have three variations of color as well. For a 256x256 resolution photo, that&#39;s 256x256x3 = 196,608 input pixels into a neural network. </p>
+            <p>There are some problems with this. First, that can be a lot of a data per observation to input into a data set. Secondly, this input does not make much common sense. One only has to look at a picture to know that a pixel is very much related to all of the pixels around it. A discussion of statistical independence aside, not accounting for the <em>context</em> in which a pixel exists may make it harder for a network to pick up on the <strong>real</strong> features of a data set. </p>
+            <p>What do I mean by real features? In theory we want our classifier to pick up on things in an image the we as humans see and use to determine an object in a photo. For example, we see an image of an elephant and we see big ears and a trunk. Wouldn&#39;t it be nice if our network could see this too? </p>
+            <p>This in some ways is the basis for convolutional neural nets, which slide &quot;filters&quot; across input photos of a given size (i.e. 3x3 pixels) and use those as inputs into our network. Look at the following chart taken from my Udacity course to visualize this. </p>
+            <p><center><img src='img/neilsen-pic.png' alt='neilsen-pic' /></center></p>
+            <p>Typically multiple convolutional layers are used to feed a <em>fully connected</em> layer which resembles that of a normal neural network.</p>
+            <p>There is a lot more in the world of CNNs to understand if you are going to implement one. I won&#39;t attempt to explain every detail here and do it justice. If you&#39;re following at a high level that should be good enough to keep tracking along. </p>
+            <h4>Setting Things Up</h4>
+            <p>For my data set, I used 346 personal photos - 173 photos of Hamilton and 173 photos of myself. This balanced data set does give all of my classifiers a leg up against what they would encounter in the &#39;real world&#39;, but for my purposes that is ok. </p>
+            <p>Each of the photos are of variable size, which means I need to standardize them to be the same shape. I used 224x224 pixels as my standardization shape. </p>
+            <p>For my CNN, I will use the following architecture - 5 convolutional layers, followed by 2 fully connected layers which then output to 2 neurons (probability of Hamilton, and probability of Alex). Convolutional layers 1, 2, and 5 are also followed up by what is called a &quot;Maxpooling&quot; layer. This layer computes the maximum value of small &quot;neighborhoods&quot; in the input. It is widely used in CNNs because they often provide more accurate models and allow you to condense layers. The network will be implemented in TensorFlow, a popular library for building deep neural networks.</p>
+            <p>To compare against the CNN, I will also be running a Gradient Boosted Tree model, Logistic Regression, and Support Vector Machine using <a href='http://scikit-learn.org/stable/' target='_blank' >scikit-learn</a>), one of the best machine learning libraries out there. </p>
+            <p>If you want to follow along and see my code, you can do so here: <a href='https://github.com/alex-lentz/alex_or_hamilton/tree/master' target='_blank' >https://github.com/alex-lentz/alex_or_hamilton/tree/master</a></p>
+            <h4>Results</h4>
+            <p><center><img src='img/bokeh_plot.png' alt='bokeh_plot' width="50%" height="30%"/></center></p>
+            <p>One of my biggest pet peeves is using Accuracy as a model validation metric, but in our case since I&#39;m using a balanced data set, it gives us a nice number to understand our overall model performances. From the chart above, the CNN does very well correctly classifying 90% of photos on a test set. However, we can also see that a Gradient Boosted Tree also does very well and classified a surprising 84% of photos correctly. Logistic Regression - the standard bearer of ML models - does pretty well with 77%, while the Support Vector Machine only classifies 69% correctly (to be fair I did not spend much time trying to tune this one). </p>
+            <p>There are more things to consider than just Accuracy. I&#39;ve created a Tableau Public visulization to show the confusion matrix for each model, as well as a comparison of the Precision-Recall curves of the models. Precision is % of the time that when the model predicts Cat that it is correct. Recall, is the % of Cat photos the model correctly predicts. These visuals and metrics can help us see if our models are favoring one prediction over another. </p>
+            <p><div class='tableauPlaceholder' id='viz1517175069521' style='position: relative'><noscript><a href='#'><img alt='Model Results ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ph&#47;PhotoClassifierModelResults&#47;ModelResults&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PhotoClassifierModelResults&#47;ModelResults' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ph&#47;PhotoClassifierModelResults&#47;ModelResults&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1517175069521');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='900px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></p>
+            <p>A couple things from the charts:</p>
+            <ul>
+            <li>When looking at the Precision-Recall curves, we can see that the CNN appears to be the more stable of the models. The curves are developed by plotting Precision and Recall at different probability thresholds (or cut offs). We see large dips because we only have 70 photos in our test set and just one or two incorrectly classified photos can make a big difference. </li>
+            <li>The Gradient Boosted Tree and Support Vector Machine favored predicting Cat, as opposed to the Logistic Regression that favored predicting Me (Alex), and the CNN which was evenly split. The test set turned out to be 38 photos of Alex and 32 photos of Cat, so the Logistic Regression and CNN seemed to do better in that regard. </li>
+            <li>Not recorded here is the training time of each classifier. The CNN took much longer than the other classifiers to train, as well as a lot of time to code and tweak.</li>
+
+            </ul>
+            <p>To answer some of my original questions: </p>
+            <ol>
+            <li>Using a small set of personal pictures, can I create an accurate classifier with a Convolutional Neural Network (CNN)? <strong>Yes, we can. </strong></li>
+            <li>Assuming I can achieve #1, can I apply other popular ML algorithms to the data and get comparable results? <strong>Yes - but I have more theories to come</strong></li>
+
+            </ol>
+            <h4>What About Interpreting Our CNN? </h4>
+            <p>This leaves us with my last question - whether or not we can extract any interpretation or understanding from our trained CNN. </p>
+            <p>First, TensorFlow comes with a great feature called TensorBoard. It allows you to visualize your neural networks among many other things. Let&#39;s look at my graph from TensorBoard: </p>
+            <p><center><img src='img/graph.png'  width="50%" height="30%"/></center></p>
+            <p>In the graph we can see all of my layers as well as the sizes of the tensors that flow between each layer. While not super helpful in explaining what happened to a business person, it is super cool! </p>
+            <p>Let&#39;s move on to something that might help. There is a great package for Python and TensorFlow called <a href='https://github.com/InFoCusp/tf_cnnvis' target='_blank' >tf_cnnvis</a> which implements two different visualization techniques for CNNs. The one that I used is based on a paper by <a href='https://www.cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf' target='_blank' >Matthew D. Zeiler and Rob Fergus</a>. This method essentially uses information in a layer of the CNNs to reconstruct the original image. Using this technique, you can start to &quot;see&quot; what the CNN is seeing for any given picture. </p>
+            <p>Using the tf_cnnvis package, I was able to create the images below: </p>
+            <img src='img/cat.png'  width="100%" height="3%"/>
+            <img src='img/alex.png'  width="100%" height="3%"/>
+            <img src='img/alexmeg.png' alt='alex_conv1' width="100%" height="3%"/>
+            <p>Though it is not crystal clear, you can start to see some of the things that the CNN sees as it tries to classify an image. Interestingly enough, the picture of my Wife and I is <strong>incorrectly classified as Cat - likely because my Wife is wearing Nittany Lion Ears</strong>. While not as simple as interpreting coefficients into a scorecard or outputing variable importance metrics, this methodolgy does at least provide some insite into what is happening. </p>
+            <h3>Conclusion</h3>
+            <p>Yes - you can use smaller sets of personal photos for some fun with TensoFlow, but you can get some pretty darn good models with other modeling techniques as well. 90% accuracy is definitely an advantage over the Logistic Regression model at 77% - but is it really worth creating a deep neural network for the gain from the Gradient Boosted Tree at 84% accuracy? </p>
+            <p>In the real world - probably not. But I&#39;m not sure this experiment really helped the CNN shine above the others. I gave it a balanced data set and only needed it to predict Cat or Alex. In future extensions of this, I will look to complicate the data and see if the Gradient Boosted Tree model can still keep up. </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>
